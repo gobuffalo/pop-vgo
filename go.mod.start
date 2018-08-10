@@ -1,0 +1,5 @@
+module pop-vgo
+
+require (
+	github.com/gobuffalo/pop v4.6.3
+)
