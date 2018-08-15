@@ -1,13 +1,12 @@
 #!/bin/bash
 
-set -e
+set -ex
 
 export GO111MODULE=on
 
-rm go.mod
-cp go.mod.start go.mod
+rm go.*
+go1.11beta3 mod init
 cat go.mod
 go1.11beta3 build -v .
 go1.11beta3 mod graph
-cat go.mod
-./pop-vgo
+cat go.mod | grep pop
